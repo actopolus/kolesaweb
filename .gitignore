@@ -3,3 +3,4 @@ ssa.html
 benches/*
 profiles/*
 *.test
+.idea
