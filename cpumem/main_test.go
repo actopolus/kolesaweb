@@ -1,4 +1,4 @@
-package cpumem
+package main
 
 import "testing"
 
