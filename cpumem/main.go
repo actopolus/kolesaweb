@@ -20,7 +20,8 @@ func main() {
 }
 
 // Найти пользователей с kolesaweb в логине
-func findUser(in []string) (out []string) {
+func findUser(in []string) ([]string) {
+	out    := make([]string, 0, len(in))
 	reg, _ := regexp.Compile("(?i)kolesaweb")
 
 	for _, user := range in {
