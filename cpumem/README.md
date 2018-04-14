@@ -4,9 +4,9 @@
 1. go test -bench=. -benchmem -benchtime 2s | tee /var/tmp/b1.bench (Бенчмарк и сохранение)
 2. go test -bench=. -benchtime 2s -cpuprofile /var/tmp/cpu1.prof    (Снять профиль по процессору)
 3. go tool pprof /var/tmp/cpu1.prof                                 (Визуализация профиля процессора)
-4. go test -bench=. -benchtime 2s -memprofile /var/tmp/mem1.prof    (Cнять профиль памяти)
-5. go tool pprof -alloc_objects /var/tmp/mem1.prof                  (Визуализация профиля памяти)
-6. go tool pprof --nodefraction=0.1 /var/tmp/cpu1.prof              (Убираем шум)
+4. go tool pprof --nodefraction=0.1 /var/tmp/cpu1.prof              (Убираем шум)
+5. go test -bench=. -benchtime 2s -memprofile /var/tmp/mem1.prof    (Cнять профиль памяти)
+6. go tool pprof -alloc_objects /var/tmp/mem1.prof                  (Визуализация профиля памяти)
 
 
 ## findUser2
