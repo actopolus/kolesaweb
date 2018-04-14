@@ -21,8 +21,10 @@ func main() {
 
 // Найти пользователей с kolesaweb в логине
 func findUser(in []string) (out []string) {
+	reg, _ := regexp.Compile("(?i)kolesaweb")
+
 	for _, user := range in {
-		if match, _ := regexp.MatchString("(?i)kolesaweb", user); match {
+		if match := reg.MatchString(user); match {
 			out = append(out, user)
 		}
 	}
